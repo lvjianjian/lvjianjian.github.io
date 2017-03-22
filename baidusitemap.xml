@@ -3,21 +3,27 @@
 
 
     
-    
   <url>
     <loc>http://yoursite.com/2017/03/22/firstblog/</loc>
-    <lastmod>2017-03-22T14:14:36.717Z</lastmod>
+    <lastmod>2017-03-22T14:22:55.149Z</lastmod>
     <data>
         <display>
         <title>firstblog</title>
         <pubTime>2017-03-22T14:14:11.000Z</pubTime>
         
+        <tag>a</tag>
+         
+        <tag>b</tag>
+         
+        <tag>c</tag>
+         
          
            
         </display>
     </data>
     </url>
 
+    
     
   <url>
     <loc>http://yoursite.com/2017/03/22/hello-world/</loc>
