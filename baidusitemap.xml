@@ -4,46 +4,20 @@
 
     
   <url>
-    <loc>http://yoursite.com/2017/03/22/firstblog/</loc>
-    <lastmod>2017-03-22T14:38:53.722Z</lastmod>
+    <loc>http://yoursite.com/2017/03/22/first/</loc>
+    <lastmod>2017-03-22T14:43:16.874Z</lastmod>
     <data>
         <display>
-        <title>firstblog</title>
-        <pubTime>2017-03-22T14:14:11.000Z</pubTime>
+        <title>first</title>
+        <pubTime>2017-03-22T14:42:48.000Z</pubTime>
         
         <tag>a</tag>
          
-        <tag>b</tag>
-         
-        <tag>c</tag>
-         
          
            
              
-              <breadCrumb title="d" url="http://yoursite.com/categories/d/"/>
+              <breadCrumb title="b" url="http://yoursite.com/categories/b/"/>
           
-             
-              <breadCrumb title="e" url="http://yoursite.com/categories/d/e/"/>
-          
-             
-              <breadCrumb title="f" url="http://yoursite.com/categories/d/e/f/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-    
-  <url>
-    <loc>http://yoursite.com/2017/03/22/hello-world/</loc>
-    <lastmod>2017-03-22T08:36:05.357Z</lastmod>
-    <data>
-        <display>
-        <title>Hello World</title>
-        <pubTime>2017-03-22T08:36:05.357Z</pubTime>
-        
-         
-           
         </display>
     </data>
     </url>

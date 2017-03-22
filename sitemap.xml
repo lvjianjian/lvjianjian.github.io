@@ -2,23 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://yoursite.com/2017/03/22/firstblog/</loc>
+    <loc>http://yoursite.com/2017/03/22/first/</loc>
     
-    <lastmod>2017-03-22T14:38:53.722Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/second/index.html</loc>
-    
-    <lastmod>2017-03-22T14:19:17.173Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2017/03/22/hello-world/</loc>
-    
-    <lastmod>2017-03-22T08:36:05.357Z</lastmod>
+    <lastmod>2017-03-22T14:43:16.874Z</lastmod>
     
   </url>
   
