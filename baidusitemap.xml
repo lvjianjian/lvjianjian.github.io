@@ -4,8 +4,30 @@
 
     
   <url>
+    <loc>http://yoursite.com/2017/03/24/markdown%E8%AF%AD%E6%B3%95/</loc>
+    <lastmod>2017-03-24T08:43:58.364Z</lastmod>
+    <data>
+        <display>
+        <title>markdown语法</title>
+        <pubTime>2017-03-24T05:12:31.000Z</pubTime>
+        
+        <tag>markdown</tag>
+         
+        <tag>语法</tag>
+         
+         
+           
+             
+              <breadCrumb title="markdown" url="http://yoursite.com/categories/markdown/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://yoursite.com/2017/03/24/remarkable%E5%AE%89%E8%A3%85/</loc>
-    <lastmod>2017-03-24T07:27:05.887Z</lastmod>
+    <lastmod>2017-03-24T07:35:59.130Z</lastmod>
     <data>
         <display>
         <title>remarkable安装</title>
@@ -24,26 +46,6 @@
           
              
               <breadCrumb title="markdown" url="http://yoursite.com/categories/ubuntu/markdown/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yoursite.com/2017/03/24/markdown%E8%AF%AD%E6%B3%95/</loc>
-    <lastmod>2017-03-24T05:32:49.663Z</lastmod>
-    <data>
-        <display>
-        <title>markdown语法</title>
-        <pubTime>2017-03-24T05:12:31.000Z</pubTime>
-        
-        <tag>markdown</tag>
-         
-         
-           
-             
-              <breadCrumb title="markdown" url="http://yoursite.com/categories/markdown/"/>
           
         </display>
     </data>

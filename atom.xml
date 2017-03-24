@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-03-24T07:27:05.887Z</updated>
+  <updated>2017-03-24T07:35:59.130Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://yoursite.com/2017/03/24/remarkable%E5%AE%89%E8%A3%85/"/>
     <id>http://yoursite.com/2017/03/24/remarkable安装/</id>
     <published>2017-03-24T07:09:04.000Z</published>
-    <updated>2017-03-24T07:27:05.887Z</updated>
+    <updated>2017-03-24T07:35:59.130Z</updated>
     
     <content type="html"><![CDATA[<p>今天在用typora的时候发现它在修改文档的时候有些不方便，而且现在我的显示屏也很大，完全可以用双栏的markdown编辑器。因此就决定用remarkable。</p>
 <hr>
@@ -58,21 +58,49 @@
     <link href="http://yoursite.com/2017/03/24/markdown%E8%AF%AD%E6%B3%95/"/>
     <id>http://yoursite.com/2017/03/24/markdown语法/</id>
     <published>2017-03-24T05:12:31.000Z</published>
-    <updated>2017-03-24T05:32:49.663Z</updated>
+    <updated>2017-03-24T08:43:58.364Z</updated>
     
-    <content type="html"><![CDATA[<h4 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"># 一级标题</div><div class="line">## 二级标题</div></pre></td></tr></table></figure>
-<p>标题总共由6级，用1个#到6个#表示，#号后面需要跟一个空格。</p>
+    <content type="html"><![CDATA[<p>###目录</p>
+<p>[TOC]</p>
 <hr>
-<h4 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h4><h5 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">* 1</div><div class="line">* 2</div><div class="line">* 3</div></pre></td></tr></table></figure>
+<h3 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"># 一级标题</div><div class="line">## 二级标题</div></pre></td></tr></table></figure>
+<p>标题总共由6级，用1个#到6个#表示，#号后面需要跟一个空格。这里不作示例了。</p>
+<hr>
+<h3 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h3><h4 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">* 1</div><div class="line">* 2</div><div class="line">* 3</div></pre></td></tr></table></figure>
 <p>用*表示无序列表，后面需要加一个空格</p>
-<h5 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h5><figure class="highlight plain"><figcaption><span>a 啊</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">1. 1</div><div class="line">2. 2</div><div class="line">3. 3</div></pre></td></tr></table></figure>
+<ul>
+<li>1</li>
+<li>2</li>
+<li>3</li>
+</ul>
+<h4 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">1. 1</div><div class="line">2. 2</div><div class="line">3. 3</div></pre></td></tr></table></figure>
 <p>用数字加点的形式表示有序列表，注意空格。</p>
-<p>###### </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div></pre></td></tr></table></figure>]]></content>
+<ol>
+<li>1</li>
+<li>2</li>
+<li>3</li>
+</ol>
+<hr>
+<p>###引用<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&gt; 这里是引用内容</div></pre></td></tr></table></figure></p>
+<blockquote>
+<p>这里是引用内容</p>
+<hr>
+<p>###链接和图片</p>
+<p>####链接<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[百度](www.baidu.com &quot;百度&quot;)</div></pre></td></tr></table></figure></p>
+</blockquote>
+<p><a href="www.baidu.com" title="百度">百度</a></p>
+<p>####图片</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">![](http://mouapp.com/Mou_128.png)</div><div class="line">![](/img/oschina.png</div></pre></td></tr></table></figure>
+<p>图片相比链接多了一个感叹号<br><img src="http://mouapp.com/Mou_128.png" alt=""><br><img src="/img/oschina.png" alt=""></p>
+<hr>
+]]></content>
     
     <summary type="html">
     
-      &lt;h4 id=&quot;标题&quot;&gt;&lt;a href=&quot;#标题&quot; class=&quot;headerlink&quot; title=&quot;标题&quot;&gt;&lt;/a&gt;标题&lt;/h4&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div c
+      &lt;p&gt;###目录&lt;/p&gt;
+&lt;p&gt;[TOC]&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&quot;标题&quot;&gt;&lt;a href=&quot;#标题&quot; class=&quot;headerlink&quot; title=&quot;标题&quot;&gt;&lt;/a&gt;标题&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr
     
     </summary>
     
@@ -80,6 +108,8 @@
     
     
       <category term="markdown" scheme="http://yoursite.com/tags/markdown/"/>
+    
+      <category term="语法" scheme="http://yoursite.com/tags/%E8%AF%AD%E6%B3%95/"/>
     
   </entry>
   
