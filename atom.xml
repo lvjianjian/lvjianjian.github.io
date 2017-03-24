@@ -58,7 +58,7 @@
     <link href="http://yoursite.com/2017/03/24/markdown%E8%AF%AD%E6%B3%95/"/>
     <id>http://yoursite.com/2017/03/24/markdown语法/</id>
     <published>2017-03-24T05:12:31.000Z</published>
-    <updated>2017-03-24T08:43:58.364Z</updated>
+    <updated>2017-03-24T08:46:04.616Z</updated>
     
     <content type="html"><![CDATA[<p>###目录</p>
 <p>[TOC]</p>
@@ -90,8 +90,8 @@
 </blockquote>
 <p><a href="www.baidu.com" title="百度">百度</a></p>
 <p>####图片</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">![](http://mouapp.com/Mou_128.png)</div><div class="line">![](/img/oschina.png</div></pre></td></tr></table></figure>
-<p>图片相比链接多了一个感叹号<br><img src="http://mouapp.com/Mou_128.png" alt=""><br><img src="/img/oschina.png" alt=""></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">![](http://mouapp.com/Mou_128.png)</div><div class="line">![](markdown语法/oschina.png)</div></pre></td></tr></table></figure>
+<p>图片相比链接多了一个感叹号<br><img src="http://mouapp.com/Mou_128.png" alt=""><br><img src="markdown语法/oschina.png" alt=""></p>
 <hr>
 ]]></content>
     
