@@ -4,6 +4,30 @@
 
     
   <url>
+    <loc>http://yoursite.com/2017/03/24/matplotlib%E4%B8%AD%E6%96%87%E6%98%BE%E7%A4%BA/</loc>
+    <lastmod>2017-03-24T11:49:25.761Z</lastmod>
+    <data>
+        <display>
+        <title>matplotlib中文显示</title>
+        <pubTime>2017-03-24T05:08:51.000Z</pubTime>
+        
+        <tag>python</tag>
+         
+        <tag>matplotlib</tag>
+         
+        <tag>中文显示</tag>
+         
+         
+           
+             
+              <breadCrumb title="python" url="http://yoursite.com/categories/python/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://yoursite.com/2017/03/24/remarkable%E5%AE%89%E8%A3%85/</loc>
     <lastmod>2017-03-24T11:03:18.634Z</lastmod>
     <data>
@@ -43,30 +67,6 @@
            
              
               <breadCrumb title="markdown" url="http://yoursite.com/categories/markdown/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yoursite.com/2017/03/24/matplotlib%E4%B8%AD%E6%96%87%E6%98%BE%E7%A4%BA/</loc>
-    <lastmod>2017-03-24T05:10:34.386Z</lastmod>
-    <data>
-        <display>
-        <title>matplotlib中文显示</title>
-        <pubTime>2017-03-24T05:08:51.000Z</pubTime>
-        
-        <tag>python</tag>
-         
-        <tag>matplotlib</tag>
-         
-        <tag>中文显示</tag>
-         
-         
-           
-             
-              <breadCrumb title="python" url="http://yoursite.com/categories/python/"/>
           
         </display>
     </data>

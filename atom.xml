@@ -112,13 +112,17 @@
     <link href="http://yoursite.com/2017/03/24/matplotlib%E4%B8%AD%E6%96%87%E6%98%BE%E7%A4%BA/"/>
     <id>http://yoursite.com/2017/03/24/matplotlib中文显示/</id>
     <published>2017-03-24T05:08:51.000Z</published>
-    <updated>2017-03-24T05:10:34.386Z</updated>
+    <updated>2017-03-24T11:49:25.761Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="matplotlib中文显示"><a href="#matplotlib中文显示" class="headerlink" title="matplotlib中文显示"></a>matplotlib中文显示</h1>]]></content>
+    <content type="html"><![CDATA[<h1 id="matplotlib中文显示"><a href="#matplotlib中文显示" class="headerlink" title="matplotlib中文显示"></a>matplotlib中文显示</h1><p>今天在ubuntu下用matplotlib显示中文的时候出现了乱码，之前在windows上用了下面这段代码就可以了。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">set_ch</span><span class="params">()</span>:</span></div><div class="line">    mpl.rcParams[<span class="string">'font.sans-serif'</span>] = [<span class="string">'simhei'</span>] <span class="comment"># 指定默认字体</span></div><div class="line">    mpl.rcParams[<span class="string">'axes.unicode_minus'</span>] = <span class="keyword">False</span> <span class="comment"># 解决保存图像是负号'-'显示为方块的问题</span></div></pre></td></tr></table></figure></p>
+<p>但是在ubuntu上还是显示不出。主要原因是ubuntu上没有这个字体。所以从windows上把黑体字体搬到ubuntu的下面这个路径下。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/usr/local/lib/python2.7/dist-packages/matplotlib/mpl-data/fonts</div></pre></td></tr></table></figure></p>
+<p>可能每台机子具体路径不太一样，需要自己找下。我是通过<code>print matplotlib.__file__</code>找到的。</p>
+<p>然后删除~/.cache/matplotlib的缓冲目录就可以了。</p>
+]]></content>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;matplotlib中文显示&quot;&gt;&lt;a href=&quot;#matplotlib中文显示&quot; class=&quot;headerlink&quot; title=&quot;matplotlib中文显示&quot;&gt;&lt;/a&gt;matplotlib中文显示&lt;/h1&gt;
+      &lt;h1 id=&quot;matplotlib中文显示&quot;&gt;&lt;a href=&quot;#matplotlib中文显示&quot; class=&quot;headerlink&quot; title=&quot;matplotlib中文显示&quot;&gt;&lt;/a&gt;matplotlib中文显示&lt;/h1&gt;&lt;p&gt;今天在ubuntu下用matplotlib显
     
     </summary>
     
