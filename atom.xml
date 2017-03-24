@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-03-24T07:35:59.130Z</updated>
+  <updated>2017-03-24T11:03:18.634Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://yoursite.com/2017/03/24/remarkable%E5%AE%89%E8%A3%85/"/>
     <id>http://yoursite.com/2017/03/24/remarkable安装/</id>
     <published>2017-03-24T07:09:04.000Z</published>
-    <updated>2017-03-24T07:35:59.130Z</updated>
+    <updated>2017-03-24T11:03:18.634Z</updated>
     
     <content type="html"><![CDATA[<p>今天在用typora的时候发现它在修改文档的时候有些不方便，而且现在我的显示屏也很大，完全可以用双栏的markdown编辑器。因此就决定用remarkable。</p>
 <hr>
@@ -40,9 +40,7 @@
     
     </summary>
     
-      <category term="ubuntu" scheme="http://yoursite.com/categories/ubuntu/"/>
-    
-      <category term="markdown" scheme="http://yoursite.com/categories/ubuntu/markdown/"/>
+      <category term="markdown" scheme="http://yoursite.com/categories/markdown/"/>
     
     
       <category term="remarkable" scheme="http://yoursite.com/tags/remarkable/"/>
