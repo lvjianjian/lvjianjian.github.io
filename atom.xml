@@ -58,11 +58,9 @@
     <link href="http://yoursite.com/2017/03/24/markdown%E8%AF%AD%E6%B3%95/"/>
     <id>http://yoursite.com/2017/03/24/markdown语法/</id>
     <published>2017-03-24T05:12:31.000Z</published>
-    <updated>2017-03-24T08:55:55.946Z</updated>
+    <updated>2017-03-24T08:57:31.042Z</updated>
     
-    <content type="html"><![CDATA[<p>a</p>
-<p>###目录</p>
-<p>[TOC]</p>
+    <content type="html"><![CDATA[<h3 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h3><p>[TOC]</p>
 <hr>
 <h3 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"># 一级标题</div><div class="line">## 二级标题</div></pre></td></tr></table></figure>
 <p>标题总共由6级，用1个#到6个#表示，#号后面需要跟一个空格。这里不作示例了。</p>
@@ -82,16 +80,14 @@
 <li>3</li>
 </ol>
 <hr>
-<p>###引用<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&gt; 这里是引用内容</div></pre></td></tr></table></figure></p>
+<h3 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&gt; 这里是引用内容</div></pre></td></tr></table></figure>
 <blockquote>
 <p>这里是引用内容</p>
 <hr>
 </blockquote>
-<p>###链接和图片</p>
-<p>####链接<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[百度](www.baidu.com &quot;百度&quot;)</div></pre></td></tr></table></figure></p>
+<h3 id="链接和图片"><a href="#链接和图片" class="headerlink" title="链接和图片"></a>链接和图片</h3><h4 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[百度](www.baidu.com &quot;百度&quot;)</div></pre></td></tr></table></figure>
 <p><a href="www.baidu.com" title="百度">百度</a></p>
-<p>####图片</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">![](http://mouapp.com/Mou_128.png)</div><div class="line">![](markdown语法/oschina.png)</div></pre></td></tr></table></figure>
+<h4 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">![](http://mouapp.com/Mou_128.png)</div><div class="line">![](markdown语法/oschina.png)</div></pre></td></tr></table></figure>
 <p>图片相比链接多了一个感叹号<br><img src="http://mouapp.com/Mou_128.png" alt=""><br><img src="/2017/03/24/markdown语法/oschina.png" alt=""></p>
 <p><strong>注意:</strong>这里我用的是hexo，需要另下插件才能把本地的图片显示出来。具体参考<a href="http://www.tuicool.com/articles/umEBVfI" target="_blank" rel="external">http://www.tuicool.com/articles/umEBVfI</a>. 此外根目录下_config.yml中的post_asset_folder设置为true </p>
 <hr>
@@ -99,11 +95,9 @@
     
     <summary type="html">
     
-      &lt;p&gt;a&lt;/p&gt;
-&lt;p&gt;###目录&lt;/p&gt;
-&lt;p&gt;[TOC]&lt;/p&gt;
+      &lt;h3 id=&quot;目录&quot;&gt;&lt;a href=&quot;#目录&quot; class=&quot;headerlink&quot; title=&quot;目录&quot;&gt;&lt;/a&gt;目录&lt;/h3&gt;&lt;p&gt;[TOC]&lt;/p&gt;
 &lt;hr&gt;
-&lt;h3 id=&quot;标题&quot;&gt;&lt;a href=&quot;#标题&quot; class=&quot;headerlink&quot; title=&quot;标题&quot;&gt;&lt;/a&gt;标题&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;
+&lt;h3 id=&quot;标题&quot;&gt;&lt;a href=&quot;#标题&quot; class=&quot;headerlink&quot; title=&quot;标题&quot;
     
     </summary>
     
