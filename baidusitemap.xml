@@ -4,19 +4,70 @@
 
     
   <url>
-    <loc>http://yoursite.com/2017/03/22/first/</loc>
-    <lastmod>2017-03-22T14:43:16.874Z</lastmod>
+    <loc>http://yoursite.com/2017/03/24/remarkable%E5%AE%89%E8%A3%85/</loc>
+    <lastmod>2017-03-24T07:27:05.887Z</lastmod>
     <data>
         <display>
-        <title>first</title>
-        <pubTime>2017-03-22T14:42:48.000Z</pubTime>
+        <title>remarkable安装</title>
+        <pubTime>2017-03-24T07:09:04.000Z</pubTime>
         
-        <tag>a</tag>
+        <tag>remarkable</tag>
+         
+        <tag>ubuntu</tag>
+         
+        <tag>安装</tag>
          
          
            
              
-              <breadCrumb title="b" url="http://yoursite.com/categories/b/"/>
+              <breadCrumb title="ubuntu" url="http://yoursite.com/categories/ubuntu/"/>
+          
+             
+              <breadCrumb title="markdown" url="http://yoursite.com/categories/ubuntu/markdown/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2017/03/24/markdown%E8%AF%AD%E6%B3%95/</loc>
+    <lastmod>2017-03-24T05:32:49.663Z</lastmod>
+    <data>
+        <display>
+        <title>markdown语法</title>
+        <pubTime>2017-03-24T05:12:31.000Z</pubTime>
+        
+        <tag>markdown</tag>
+         
+         
+           
+             
+              <breadCrumb title="markdown" url="http://yoursite.com/categories/markdown/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2017/03/24/matplotlib%E4%B8%AD%E6%96%87%E6%98%BE%E7%A4%BA/</loc>
+    <lastmod>2017-03-24T05:10:34.386Z</lastmod>
+    <data>
+        <display>
+        <title>matplotlib中文显示</title>
+        <pubTime>2017-03-24T05:08:51.000Z</pubTime>
+        
+        <tag>python</tag>
+         
+        <tag>matplotlib</tag>
+         
+        <tag>中文显示</tag>
+         
+         
+           
+             
+              <breadCrumb title="python" url="http://yoursite.com/categories/python/"/>
           
         </display>
     </data>
