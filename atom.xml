@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-04-06T08:03:50.004Z</updated>
+  <updated>2017-09-18T04:21:13.923Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>.ssh文件权限</title>
+    <link href="http://yoursite.com/2017/09/18/ssh%E6%96%87%E4%BB%B6%E6%9D%83%E9%99%90/"/>
+    <id>http://yoursite.com/2017/09/18/ssh文件权限/</id>
+    <published>2017-09-18T04:15:36.000Z</published>
+    <updated>2017-09-18T04:21:13.923Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="在ssh中无密码登录的文件权限问题"><a href="#在ssh中无密码登录的文件权限问题" class="headerlink" title="在ssh中无密码登录的文件权限问题"></a>在ssh中无密码登录的文件权限问题</h2><p>.ssh文件夹的权限为700<br>.ssh中authorized_keys文件的权限为600</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;在ssh中无密码登录的文件权限问题&quot;&gt;&lt;a href=&quot;#在ssh中无密码登录的文件权限问题&quot; class=&quot;headerlink&quot; title=&quot;在ssh中无密码登录的文件权限问题&quot;&gt;&lt;/a&gt;在ssh中无密码登录的文件权限问题&lt;/h2&gt;&lt;p&gt;.ssh文件夹的权限
+    
+    </summary>
+    
+      <category term="ssh" scheme="http://yoursite.com/categories/ssh/"/>
+    
+    
+      <category term="ssh" scheme="http://yoursite.com/tags/ssh/"/>
+    
+      <category term="文件权限" scheme="http://yoursite.com/tags/%E6%96%87%E4%BB%B6%E6%9D%83%E9%99%90/"/>
+    
+  </entry>
   
   <entry>
     <title>python中的抽象方法，抽象类，私有，保护方法</title>
