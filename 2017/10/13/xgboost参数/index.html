@@ -1,0 +1,45 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description"><title>xgboost参数 | lv~jianjian's blog</title><link rel="stylesheet" type="text/css" href="//fonts.css.network/css?family=Source+Code+Pro"><link rel="stylesheet" type="text/css" href="/css/style.css?v=1.3.0"><link rel="stylesheet" type="text/css" href="/css/highlight.css?v=1.3.0"><link rel="Shortcut Icon" href="/favicon.ico"><link rel="bookmark" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"><link rel="alternate" type="application/atom+xml" href="/atom.xml"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">xgboost参数</h1><a id="logo" href="/.">lv~jianjian's blog</a><p class="description">所爱隔山海,山海皆可平</p></div><div id="nav-menu"><a href="/." class="current"><i class="fa fa-home"> 主页</i></a><a href="/archives/"><i class="fa fa-archive"> 归档</i></a><a href="/atom.xml"><i class="fa fa-rss"> 订阅</i></a></div></div><div id="layout" class="layout-g"><div class="layout-l"><div class="content_container"><div class="post"><h1 class="post-title">xgboost参数</h1><div class="post-meta">Oct 13, 2017<span> | </span><span class="category"><a href="/categories/机器学习/">机器学习</a></span><script src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js" async></script><span id="busuanzi_container_page_pv"> | <span id="busuanzi_value_page_pv"></span><span> Hits</span></span></div><div class="post-content"><h2 id="xgboost-参数介绍"><a href="#xgboost-参数介绍" class="headerlink" title="xgboost 参数介绍"></a>xgboost 参数介绍</h2><p>这里记录下xgboost的一些重要参数，方便以后查阅。</p>
+<h4 id="Task-参数"><a href="#Task-参数" class="headerlink" title="Task 参数"></a>Task 参数</h4><ol>
+<li><strong>objective</strong><br> 定义学习目标, 默认值为 reg:linear<ul>
+<li>reg:linear  —— 线性回归</li>
+<li>reg:logistic —— 逻辑回归</li>
+<li>binary:logistic —— 二分类逻辑回归，输出概率</li>
+<li>binary:logitraw —— 二分类逻辑回归，输出w<sup>T</sup>x（logistic转换前的得分）</li>
+<li>count:poisson —— 计数数据的泊松回归，输出泊松分布的均值（max_delta_step默认设置为0.7）</li>
+<li>multi:softmax —— 多分类，需要设置num_class</li>
+<li>multi:softprob —— 多分类，输出在各个类别下的概率</li>
+<li>rank:pairwise —— 任务排序，通过最小化pairwise loss求解</li>
+</ul>
+</li>
+<li><strong>base_score</strong><br> 所有实例、global bias的最初预测得分，默认0.5</li>
+<li><strong>eval_metric</strong><br> 评估指标，不用objective有不同的默认值<ul>
+<li>rmse</li>
+<li>logloss</li>
+<li>error 错误率</li>
+<li>merror 多分类错误率</li>
+<li>mlogloss</li>
+<li>auc</li>
+<li>ndcg  (normalized discounted cumulative gain)</li>
+<li>map 平均准确率</li>
+<li>ndcg@n；map@n；ndcg-；map-；ndcg@n-；map@n-</li>
+</ul>
+</li>
+</ol>
+<h4 id="booster-参数"><a href="#booster-参数" class="headerlink" title="booster 参数"></a>booster 参数</h4><ol>
+<li><strong>eta</strong>：为了防止过拟合，更新过程中用到的收缩步长。在每次提升计算之后，算法会直接获得新特征的权重。 eta通过缩减特征的权重使提升计算过程更加保守。缺省值为0.3。 类似学习率</li>
+<li><strong>gamma</strong> : 默认值为0，为了对树的叶子节点做进一步的分割而必须设置的损失减少的最小值。该值越大，算法越保守</li>
+<li><strong>max_depth</strong>: 树的最大深度</li>
+<li><strong>min_child_weight</strong>：树的叶子节点最小权重</li>
+<li><strong>max_delta_step</strong>：如果该值为0，就是没有限制；如果设为一个正数，可以使每一步更新更加保守通常情况下这一参数是不需要设置的</li>
+<li><strong>subsample</strong>：选取子样本的比率</li>
+<li><strong>colsample_bytree</strong>： 选取的特征的比率</li>
+<li><strong>lambda</strong>：l2正则</li>
+<li><strong>alpha</strong>：l1正则</li>
+</ol>
+<h4 id="一般参数"><a href="#一般参数" class="headerlink" title="一般参数"></a>一般参数</h4><ol>
+<li><strong>booster</strong>: gbtree和gblinear。gbtree使用基于树的模型进行提升计算，gblinear使用线性模型进行提升计算。缺省值为gbtree。还有一个dart。</li>
+<li><strong>silent</strong>: 取0时表示打印出运行时信息，取1时表示以缄默方式运行，不打印运行时信息。缺省值为0。</li>
+<li><strong>nthread</strong>: 运行时的线程数。缺省值是当前系统可以获得的最大线程数。</li>
+</ol>
+<p>一般会设置 objective,eval_metric,eta,max_depth,subsample,colsample_bytree<br>防止过拟合还会设置 gamma,min_child_weight,lambda,alpha</p>
+</div><div class="tags"><a href="/tags/xgboost/">xgboost</a><a href="/tags/boost/">boost</a><a href="/tags/机器学习/">机器学习</a></div><div class="post-nav"><a href="/2017/09/18/ssh文件权限/" class="next">.ssh文件权限</a></div><div id="comments"></div></div></div></div><div class="layout-r"><div id="sidebar"><div class="widget"><div id="search-form"><div id="result-mask" class="hide"></div><label><input id="search-key" type="text" autocomplete="off" placeholder="请输入关键字..."/></label><div id="result-wrap" class="hide"><div id="search-result"></div></div><div class="hide"><template id="search-tpl"><div class="item"><a href="/{path}" title="{title}"><div class="title">{title}</div><div class="time">{date}</div><div class="tags">{tags}</div></a></div></template></div></div></div><div class="widget"><div class="widget-title"><i class="fa fa-gui"> 分类</i></div><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/leetcode/">leetcode</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/markdown/">markdown</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/python/">python</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/ssh/">ssh</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/机器学习/">机器学习</a><span class="category-list-count">1</span></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-biao"> 标签</i></div><div class="tagcloud"><a href="/tags/leetcode/" style="font-size: 15px;">leetcode</a> <a href="/tags/markdown/" style="font-size: 15px;">markdown</a> <a href="/tags/python/" style="font-size: 15px;">python</a> <a href="/tags/matplotlib/" style="font-size: 15px;">matplotlib</a> <a href="/tags/中文显示/" style="font-size: 15px;">中文显示</a> <a href="/tags/xgboost/" style="font-size: 15px;">xgboost</a> <a href="/tags/boost/" style="font-size: 15px;">boost</a> <a href="/tags/机器学习/" style="font-size: 15px;">机器学习</a> <a href="/tags/语法/" style="font-size: 15px;">语法</a> <a href="/tags/整型操作/" style="font-size: 15px;">整型操作</a> <a href="/tags/抽象/" style="font-size: 15px;">抽象</a> <a href="/tags/remarkable/" style="font-size: 15px;">remarkable</a> <a href="/tags/ubuntu/" style="font-size: 15px;">ubuntu</a> <a href="/tags/安装/" style="font-size: 15px;">安装</a> <a href="/tags/ssh/" style="font-size: 15px;">ssh</a> <a href="/tags/文件权限/" style="font-size: 15px;">文件权限</a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-fei"> 归档</i></div><ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">十月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">九月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">四月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">三月 2017</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-xie"> 最新文章</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/10/13/xgboost参数/">xgboost参数</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/09/18/ssh文件权限/">.ssh文件权限</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/06/python中的抽象方法，抽象类，私有，保护方法/">python中的抽象方法，抽象类，私有，保护方法</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/05/整形操作中判断是否超出边界/">整型操作中判断是否超出边界</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/24/remarkable安装/">remarkable安装</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/24/markdown语法/">markdown语法</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/24/matplotlib中文显示/">matplotlib中文显示</a></li></ul></div></div></div></div><a id="totop" href="#top"></a><script type="text/javascript" src="/js/totop.js?v=1.3.0" async></script><div id="footer"><div class="footer-info"><p><a href="/baidusitemap.xml">网站地图</a> |<a href="/atom.xml">订阅本站</a> |<span>联系博主：<a href="mailto:20165227001@stu.suda.edu.cn" class="fa fa-email"></a><!--a.fa.fa-weibo(href="#{theme.about.weibo_url}",target="_blank")--><a href="https://github.com/lvjianjian" target="_blank" class="fa fa-github"> </a></span></p><p><span> Copyright &copy;<a href="/." rel="nofollow">Zhongjian Lv</a></span><span> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a></span><span><a rel="nofollow" target="_blank" href="https://github.com/chaooo/hexo-theme-BlueLake"> Theme </a>by<a rel="nofollow" target="_blank" href="https://github.com/chaooo"> Charles.</a></span></p></div></div></div><script type="text/javascript" src="/js/search.json.js?v=1.3.0"></script></body></html>
