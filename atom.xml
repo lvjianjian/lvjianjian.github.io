@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-10-13T13:49:25.747Z</updated>
+  <updated>2017-10-13T14:58:34.198Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://yoursite.com/2017/10/13/xgboost%E5%8F%82%E6%95%B0/"/>
     <id>http://yoursite.com/2017/10/13/xgboost参数/</id>
     <published>2017-10-13T12:46:10.000Z</published>
-    <updated>2017-10-13T13:49:25.747Z</updated>
+    <updated>2017-10-13T14:58:34.198Z</updated>
     
     <content type="html"><![CDATA[<h2 id="xgboost-参数介绍"><a href="#xgboost-参数介绍" class="headerlink" title="xgboost 参数介绍"></a>xgboost 参数介绍</h2><p>这里记录下xgboost的一些重要参数，方便以后查阅。</p>
 <h4 id="Task-参数"><a href="#Task-参数" class="headerlink" title="Task 参数"></a>Task 参数</h4><ol>
@@ -65,7 +65,7 @@
 <li><strong>silent</strong>: 取0时表示打印出运行时信息，取1时表示以缄默方式运行，不打印运行时信息。缺省值为0。</li>
 <li><strong>nthread</strong>: 运行时的线程数。缺省值是当前系统可以获得的最大线程数。</li>
 </ol>
-<p>一般会设置 objective,eval_metric,eta,max_depth,subsample,colsample_bytree<br>防止过拟合还会设置 gamma,min_child_weight,lambda,alpha</p>
+<p>一般会设置 objective,eval_metric,eta,max_depth,subsample,colsample_bytree<br>防止过拟合还会设置 gamma,min_child_weight,lambda,alpha<br>silent一般设置为1</p>
 ]]></content>
     
     <summary type="html">
