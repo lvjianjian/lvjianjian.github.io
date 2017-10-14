@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-10-13T14:58:34.198Z</updated>
+  <updated>2017-10-14T06:25:04.983Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,68 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>lightgbm参数</title>
+    <link href="http://yoursite.com/2017/10/14/lightgbm%E5%8F%82%E6%95%B0/"/>
+    <id>http://yoursite.com/2017/10/14/lightgbm参数/</id>
+    <published>2017-10-14T05:59:45.000Z</published>
+    <updated>2017-10-14T06:25:04.983Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="lightgbm-参数介绍"><a href="#lightgbm-参数介绍" class="headerlink" title="lightgbm 参数介绍"></a>lightgbm 参数介绍</h2><p>之前介绍了下xgboost的重要参数。今天把lightgbm的参数整理一下，方便以后查阅。</p>
+<ol>
+<li><p><strong>Core Paramater</strong><br> 这是一般会设置的核心参数</p>
+<ul>
+<li><strong>objective</strong>: regression, regression_l2(mse), regression_l1(mae), huber, fair, poisson, binary, lambdarank, multiclass</li>
+<li><strong>boosting</strong>: gbdt, rf, dart, goss</li>
+<li><strong>num_rounds</strong>: boosting的数量</li>
+<li><strong>learning_rate</strong>: 学习率</li>
+<li><strong>num_leaves</strong>: 单一树中的叶子数</li>
+<li><strong>num_threads</strong>: 最好设置为CPU核数</li>
+</ul>
+</li>
+<li><p><strong>Learning Control Paramater</strong><br> 这些是控制学习的一些参数，只选取了个gbdt有关的一些。其他后续补充。</p>
+<ul>
+<li><strong>max_depth</strong></li>
+<li><strong>min_data_in_leaf</strong></li>
+<li><strong>min_sum_hessian_in_leaf</strong> : 类似min_data_in_leaf</li>
+<li><strong>feature_fraction</strong>：类似xgboost中的colsample_bytree</li>
+<li><strong>feature_fraction_seed</strong></li>
+<li><strong>bagging_fraction</strong>：随机选择一部分数据不重新采样</li>
+<li><strong>bagging_freq</strong></li>
+<li><strong>bagging_seed</strong></li>
+<li><strong>early_stopping_round</strong></li>
+<li><strong>lambda_l1</strong></li>
+<li><strong>lambda_l2</strong></li>
+<li><strong>min_gain_to_split</strong>：划分节点的最小提升</li>
+</ul>
+</li>
+<li><p><strong>Metric Parameter</strong></p>
+<ul>
+<li><strong>metric</strong> 评估参数，主要有：l1,l2,l2_root(rmse),huber,fair,poisson,ndcg,map,auc,binary_logloss,binary_error,multi_logloss,multi_error</li>
+<li><strong>metric_freq</strong>: 输出频率</li>
+</ul>
+</li>
+</ol>
+<p>还有不少参数暂时没怎么用到，以后再补充。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;lightgbm-参数介绍&quot;&gt;&lt;a href=&quot;#lightgbm-参数介绍&quot; class=&quot;headerlink&quot; title=&quot;lightgbm 参数介绍&quot;&gt;&lt;/a&gt;lightgbm 参数介绍&lt;/h2&gt;&lt;p&gt;之前介绍了下xgboost的重要参数。今天把ligh
+    
+    </summary>
+    
+      <category term="机器学习" scheme="http://yoursite.com/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="lightgbm" scheme="http://yoursite.com/tags/lightgbm/"/>
+    
+      <category term="boost" scheme="http://yoursite.com/tags/boost/"/>
+    
+      <category term="机器学习" scheme="http://yoursite.com/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
   
   <entry>
     <title>xgboost参数</title>
@@ -77,11 +139,11 @@
       <category term="机器学习" scheme="http://yoursite.com/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
     
-      <category term="xgboost" scheme="http://yoursite.com/tags/xgboost/"/>
-    
       <category term="boost" scheme="http://yoursite.com/tags/boost/"/>
     
       <category term="机器学习" scheme="http://yoursite.com/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+      <category term="xgboost" scheme="http://yoursite.com/tags/xgboost/"/>
     
   </entry>
   
