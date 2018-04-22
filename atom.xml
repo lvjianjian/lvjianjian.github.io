@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-10-14T06:25:04.983Z</updated>
+  <updated>2018-04-22T14:06:35.407Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,39 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>记阿里一面</title>
+    <link href="http://yoursite.com/2018/04/22/%E8%AE%B0%E9%98%BF%E9%87%8C%E4%B8%80%E9%9D%A2/"/>
+    <id>http://yoursite.com/2018/04/22/记阿里一面/</id>
+    <published>2018-04-22T13:53:40.000Z</published>
+    <updated>2018-04-22T14:06:35.407Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="记阿里一面"><a href="#记阿里一面" class="headerlink" title="记阿里一面"></a>记阿里一面</h2><p> 前几天阿里来了电一面，今天记录一下问题，也方便以后面试时查阅。<br> 阿里面的是上海财富部的java开发，偏机器学习方面。</p>
+<ol>
+<li>java写完程序（.java）,到执行都经历了哪些。(java程序执行过程,包括java编译以及jvm执行)</li>
+<li>数据库中一、二、三以及BC范式的作用。（应该针对减少冗余，防止不一致性方面作答吧）</li>
+<li>linux 查看进程命令 (top,htop, ps -ef 等)</li>
+<li>了解哪些大数据平台/框架 （答了spark，因此让我介绍下spark）</li>
+<li>讲下logistic回归</li>
+<li>讲下DL中的激活函数</li>
+</ol>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;记阿里一面&quot;&gt;&lt;a href=&quot;#记阿里一面&quot; class=&quot;headerlink&quot; title=&quot;记阿里一面&quot;&gt;&lt;/a&gt;记阿里一面&lt;/h2&gt;&lt;p&gt; 前几天阿里来了电一面，今天记录一下问题，也方便以后面试时查阅。&lt;br&gt; 阿里面的是上海财富部的java开发，偏机器
+    
+    </summary>
+    
+      <category term="面经" scheme="http://yoursite.com/categories/%E9%9D%A2%E7%BB%8F/"/>
+    
+    
+      <category term="面经" scheme="http://yoursite.com/tags/%E9%9D%A2%E7%BB%8F/"/>
+    
+      <category term="阿里" scheme="http://yoursite.com/tags/%E9%98%BF%E9%87%8C/"/>
+    
+  </entry>
   
   <entry>
     <title>lightgbm参数</title>
