@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-05-02T14:20:54.327Z</updated>
+  <updated>2018-05-02T14:29:03.872Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,18 +20,15 @@
     <link href="http://yoursite.com/2018/05/02/Java%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B/"/>
     <id>http://yoursite.com/2018/05/02/Java内存模型/</id>
     <published>2018-05-02T13:43:18.000Z</published>
-    <updated>2018-05-02T14:20:54.327Z</updated>
+    <updated>2018-05-02T14:29:03.872Z</updated>
     
     <content type="html"><![CDATA[<h1 id="Java内存区域"><a href="#Java内存区域" class="headerlink" title="Java内存区域"></a>Java内存区域</h1><h3 id="1-运行时数据区"><a href="#1-运行时数据区" class="headerlink" title="1. 运行时数据区"></a>1. 运行时数据区</h3><p>JVM虚拟机管理的内存会在执行时被划分为以下几个区域,总体的内存模型如下：<br><img src="/2018/05/02/Java内存模型/mem_model.png" alt=""><br>其中方法区和Java堆是所有线程共享的，而JVM栈、本地方法栈、程序计数器是线程私有的。</p>
 <ul>
 <li><p>程序计数器</p>
 <ul>
-<li><p>一块较小的内存, 可以看成是当前线程所执行的字节码的行号指示器，目的是为了引导字节码解析的顺序（字节码解释器通过改变这个计数器的值来选取下一条要执行的字节码指令）</p>
-<ul>
-<li><p>如果线程执行一个Java方法，则程序计数器存放虚拟机字节码指令的地址，如果执行一个Native放法，则为空</p>
-</li>
-<li><p>唯一一个没有规定任何OutOfMemoryError情况的区域</p>
-</li>
+<li>一块较小的内存, 可以看成是当前线程所执行的字节码的行号指示器，目的是为了引导字节码解析的顺序（字节码解释器通过改变这个计数器的值来选取下一条要执行的字节码指令）</li>
+<li>如果线程执行一个Java方法，则程序计数器存放虚拟机字节码指令的地址，如果执行一个Native放法，则为空<ul>
+<li>唯一一个没有规定任何OutOfMemoryError情况的区域</li>
 </ul>
 </li>
 </ul>
