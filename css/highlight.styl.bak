@@ -9,7 +9,7 @@ pre
     display block
     box-sizing: border-box
     overflow-x: auto
-    font-family: Consolas, Source Code Pro, Monaco, Menlo, monospace
+    font-family: Source Code Pro, Monaco, Menlo, Consolas, monospace
     margin: 1.2em 0
     padding 15px 15px 10px 15px
     line-height: 1.2em
