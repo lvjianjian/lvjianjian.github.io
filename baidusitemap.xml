@@ -4,6 +4,28 @@
 
     
   <url>
+    <loc>http://yoursite.com/2018/05/02/Java%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B/</loc>
+    <lastmod>2018-05-02T13:58:05.182Z</lastmod>
+    <data>
+        <display>
+        <title>Java内存模型</title>
+        <pubTime>2018-05-02T13:43:18.000Z</pubTime>
+        
+        <tag>Java</tag>
+         
+        <tag>内存模型</tag>
+         
+         
+           
+             
+              <breadCrumb title="Java" url="http://yoursite.com/categories/Java/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://yoursite.com/2018/04/22/%E8%AE%B0%E9%98%BF%E9%87%8C%E4%B8%80%E9%9D%A2/</loc>
     <lastmod>2018-04-22T14:06:35.407Z</lastmod>
     <data>
