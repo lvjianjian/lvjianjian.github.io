@@ -565,7 +565,7 @@ body {
 .post .post-content p code {
   margin: 0 5px;
   padding: 0 5px;
-  font-family: Consolas, Source Code Pro, Monaco, Menlo, monospace;
+  font-family: Consolas, Monaco, Menlo, monospace;
   color: #4d4d4c;
   background: #eee;
   font-size: 0.95em;
@@ -611,7 +611,7 @@ body {
 .post .post-content ol code {
   margin: 0 5px;
   padding: 0 5px;
-  font-family: Consolas, Source Code Pro, Monaco, Menlo, monospace;
+  font-family: Consolas, Monaco, Menlo, monospace;
   color: #4d4d4c;
   background: #eee;
   font-size: 0.95em;
