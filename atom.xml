@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-05-02T15:23:17.695Z</updated>
+  <updated>2018-05-04T02:39:13.329Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://yoursite.com/2018/05/02/Java%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B/"/>
     <id>http://yoursite.com/2018/05/02/Java内存模型/</id>
     <published>2018-05-02T13:43:18.000Z</published>
-    <updated>2018-05-02T15:23:17.695Z</updated>
+    <updated>2018-05-04T02:39:13.329Z</updated>
     
     <content type="html"><![CDATA[<h1 id="Java内存区域"><a href="#Java内存区域" class="headerlink" title="Java内存区域"></a>Java内存区域</h1><h3 id="1-运行时数据区"><a href="#1-运行时数据区" class="headerlink" title="1. 运行时数据区"></a>1. 运行时数据区</h3><p>JVM虚拟机管理的内存会在执行时被划分为以下几个区域,总体的内存模型如下：<br><img src="/2018/05/02/Java内存模型/mem_model.png" alt=""><br>其中方法区和Java堆是所有线程共享的，而JVM栈、本地方法栈、程序计数器是线程私有的。</p>
 <ul>
@@ -54,14 +54,16 @@
 <li><p>堆</p>
 <ul>
 <li>虚拟机启动时创建，用于存放对象实例和数组，是垃圾收集器管理的主要区域。</li>
+<li>由年轻代、年老代、永久代组成。（JDK8开始hotspot将永久代移除，取而代之的是Metaspace）</li>
 <li>可以处于物理上不连续的内存空间中，只要逻辑上连续即可。</li>
 <li>若在堆中没有完成实例分配，并且堆也无法再扩展时，将会抛出OutOfMemoryError异常。</li>
 </ul>
 </li>
 <li><p>方法区</p>
 <ul>
-<li>于存储被虚拟机加载的类信息、常量、静态变量、即时编译器编译后的代码等。</li>
+<li>用于存储被虚拟机加载的类信息、常量、静态变量、即时编译器编译后的代码等。</li>
 <li>与堆一样逻辑上连续即可，还可以选择不实现垃圾收集，若要回收则主要针对常量池和对类型的卸载。</li>
+<li>一些虚拟机使用”永久代”(Permanent Generation)来实现方法区</li>
 <li>当方法区无法满足内存分配需求时，将抛出OutOfMemoryError异常。 </li>
 </ul>
 </li>
@@ -97,6 +99,22 @@
 <ul>
 <li>句柄访问：Java堆划分一块内存作为句柄池，reference存储句柄地址，句柄中包含对象实例数据和类型数据的地址，如下图<br><img src="/2018/05/02/Java内存模型/access_object_handler.png" alt=""></li>
 <li>直接指针访问：reference存储的直接就是对象地址，如下<br><img src="/2018/05/02/Java内存模型/access_direct.png" alt=""></li>
+</ul>
+</li>
+</ul>
+<h3 id="3-内存参数设置"><a href="#3-内存参数设置" class="headerlink" title="3. 内存参数设置"></a>3. 内存参数设置</h3><ul>
+<li>堆大小设置 <ul>
+<li>-Xms：堆最小内存，即初始内存</li>
+<li>-Xmx：堆最大内存</li>
+<li>-Xmn：年轻代大小</li>
+<li>-Xss：JVM栈大小</li>
+<li>-XX:NewRatio：年轻代与年老代的比值</li>
+<li>-XX:SurvivorRatio：年轻代中Eden区与Survivor区的比值</li>
+<li>-XX:PermSize：永久代大小(JDK8 已被MetaspaceSize取代)</li>
+<li>-XX:MaxPermSize：最大永久代大小(JDK8 已被MaxMetaspaceSize取代)</li>
+<li>-XX:MetaspaceSize：元空间大小</li>
+<li>-XX:MaxMetaspaceSize：最大元空间大小</li>
+<li>-XX:MaxTenuringThreshold：垃圾最大年龄</li>
 </ul>
 </li>
 </ul>
