@@ -32,12 +32,14 @@ JVM虚拟机管理的内存会在执行时被划分为以下几个区域,总体�
 	
 * 堆
 	* 虚拟机启动时创建，用于存放对象实例和数组，是垃圾收集器管理的主要区域。
+	* 由年轻代、年老代、永久代组成。（JDK8开始hotspot将永久代移除，取而代之的是Metaspace）
 	* 可以处于物理上不连续的内存空间中，只要逻辑上连续即可。
 	* 若在堆中没有完成实例分配，并且堆也无法再扩展时，将会抛出OutOfMemoryError异常。
 	
 * 方法区
-	* 于存储被虚拟机加载的类信息、常量、静态变量、即时编译器编译后的代码等。
+	* 用于存储被虚拟机加载的类信息、常量、静态变量、即时编译器编译后的代码等。
 	* 与堆一样逻辑上连续即可，还可以选择不实现垃圾收集，若要回收则主要针对常量池和对类型的卸载。
+	* 一些虚拟机使用"永久代"(Permanent Generation)来实现方法区
 	* 当方法区无法满足内存分配需求时，将抛出OutOfMemoryError异常。 
 
 * 运行时常量池
@@ -66,3 +68,17 @@ JVM虚拟机管理的内存会在执行时被划分为以下几个区域,总体�
 	![](Java内存模型/access_object_handler.png)
 	* 直接指针访问：reference存储的直接就是对象地址，如下
 	![](Java内存模型/access_direct.png)
+	
+### 3. 内存参数设置
+* 堆大小设置 
+	* -Xms：堆最小内存，即初始内存
+	* -Xmx：堆最大内存
+	* -Xmn：年轻代大小
+	* -Xss：JVM栈大小
+	* -XX:NewRatio：年轻代与年老代的比值
+	* -XX:SurvivorRatio：年轻代中Eden区与Survivor区的比值
+	* -XX:PermSize：永久代大小(JDK8 已被MetaspaceSize取代)
+	* -XX:MaxPermSize：最大永久代大小(JDK8 已被MaxMetaspaceSize取代)
+	* -XX:MetaspaceSize：元空间大小
+	* -XX:MaxMetaspaceSize：最大元空间大小
+	* -XX:MaxTenuringThreshold：垃圾最大年龄
