@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-05-04T02:39:13.329Z</updated>
+  <updated>2018-05-05T07:01:37.233Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,86 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>交通流或速度预测论文总结</title>
+    <link href="http://yoursite.com/2018/05/05/%E4%BA%A4%E9%80%9A%E6%B5%81%E6%88%96%E9%80%9F%E5%BA%A6%E9%A2%84%E6%B5%8B%E8%AE%BA%E6%96%87%E6%80%BB%E7%BB%93/"/>
+    <id>http://yoursite.com/2018/05/05/交通流或速度预测论文总结/</id>
+    <published>2018-05-05T06:58:04.000Z</published>
+    <updated>2018-05-05T07:01:37.233Z</updated>
+    
+    <content type="html"><![CDATA[<p>简单总结下看到的交通预测的论文方法， 会持续更新。</p>
+<table>
+<thead>
+<tr>
+<th>Title</th>
+<th>Author</th>
+<th>Venue</th>
+<th style="text-align:left">Contribution</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Travel-time prediction with support vector regression</td>
+<td>Chun-Hsin Wu, Jan-Ming Ho, Der-Tsai Lee</td>
+<td>IEEE Trans. ITS 2004</td>
+<td style="text-align:left">针对单个路段的行驶时间/速度进行支持向量回归</td>
+</tr>
+<tr>
+<td>Time Series Forecasting using Distribution Enhanced Linear Regression</td>
+<td>G Ristanoski，W Liu，J Bailey</td>
+<td>PAKDD 2013</td>
+<td style="text-align:left">1. 分布改变点检测并分段 <br>2. 使用线性回归(LR)最小化各个分组各自的损失加上这些组损失的方差(论文中其实损失函数就是对各个组的MSE的RMSE)</td>
+</tr>
+<tr>
+<td>Long short-term memory neural network for traffic speed prediction using remote microwave sensor data</td>
+<td>Xiaolei Ma , Zhimin Tao , Yinhai Wang , Haiyang Yu , Yunpeng Wang</td>
+<td>Transportation Research Part C Emerging Technologies 2015</td>
+<td style="text-align:left">针对单个路段的行驶时间/速度，用LSTM预测</td>
+</tr>
+<tr>
+<td>Short-term traffic flow prediction using seasonal ARIMA model with limited input data</td>
+<td>SV Kumar ，L Vanajakshi</td>
+<td>European Transport Research Review, 2015</td>
+<td style="text-align:left">使用Seasonal ARIMA 对单个路段的交通流进行预测</td>
+</tr>
+<tr>
+<td>Utilizing Real-World Transportation Data for Accurate Traffic Prediction</td>
+<td>B Pan, U Demiryurek, C Shahabi</td>
+<td>ICDM 2012</td>
+<td style="text-align:left">1. 用均值预测和ARIMA预测结合预测单路段流量，使用历史数据判断用哪种方法更佳(通常长期预测用均值法更好) <br> 2. 结合事件因素进行预测纠正。</td>
+</tr>
+<tr>
+<td>Spatiotemporal Recurrent Convolutional Networks for Traffic Prediction in Transportation Networks</td>
+<td>Haiyang Yu, Zhihai Wu, Shuqin Wang, Yunpeng Wang, Xiaolei Ma</td>
+<td>Sensors 2017</td>
+<td style="text-align:left">1. 对整个路网进行grid划分，统计各个grid的link speed的均值 <br> 2. 用DCNN学习各个时刻的grid speed matrix  <br> 3. 将各个时刻DCNN学出的features 代入 到LSTM 然后预测下一时刻的所有link speed <br> 4. 预测多个可以将预测出的所有link speed再统计成grid matrix 再用DCNN学习代入之前的LSTM继续预测(有点类似NLP中预测后面的句子，把当前预测的单词作为输入不断预测下一个单词直到结束)</td>
+</tr>
+</tbody>
+</table>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;简单总结下看到的交通预测的论文方法， 会持续更新。&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Title&lt;/th&gt;
+&lt;th&gt;Author&lt;/th&gt;
+&lt;th&gt;Venue&lt;/th&gt;
+&lt;th style=&quot;text-align:left&quot;&gt;Contribution
+    
+    </summary>
+    
+      <category term="交通预测" scheme="http://yoursite.com/categories/%E4%BA%A4%E9%80%9A%E9%A2%84%E6%B5%8B/"/>
+    
+    
+      <category term="交通流预测" scheme="http://yoursite.com/tags/%E4%BA%A4%E9%80%9A%E6%B5%81%E9%A2%84%E6%B5%8B/"/>
+    
+      <category term="交通速度预测" scheme="http://yoursite.com/tags/%E4%BA%A4%E9%80%9A%E9%80%9F%E5%BA%A6%E9%A2%84%E6%B5%8B/"/>
+    
+  </entry>
   
   <entry>
     <title>Java内存模型</title>
