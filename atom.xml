@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-05-05T07:18:22.762Z</updated>
+  <updated>2018-05-06T14:41:31.495Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,9 +20,9 @@
     <link href="http://yoursite.com/2018/05/05/%E4%BA%A4%E9%80%9A%E6%B5%81%E6%88%96%E9%80%9F%E5%BA%A6%E9%A2%84%E6%B5%8B%E8%AE%BA%E6%96%87%E6%80%BB%E7%BB%93/"/>
     <id>http://yoursite.com/2018/05/05/交通流或速度预测论文总结/</id>
     <published>2018-05-05T06:58:04.000Z</published>
-    <updated>2018-05-05T07:18:22.762Z</updated>
+    <updated>2018-05-06T14:41:31.495Z</updated>
     
-    <content type="html"><![CDATA[<p>简单总结下看到的交通预测的论文方法, 会持续更新。</p>
+    <content type="html"><![CDATA[<p>简单总结下看到的交通预测的论文方法，会持续更新。</p>
 <table>
 <thead>
 <tr>
@@ -66,8 +66,14 @@
 <tr>
 <td style="text-align:left">Spatiotemporal Recurrent Convolutional Networks for Traffic Prediction in Transportation Networks</td>
 <td>Haiyang Yu, Zhihai Wu, Shuqin Wang, Yunpeng Wang, Xiaolei Ma</td>
-<td>Sensors 2017</td>
-<td style="text-align:left">1. 对整个路网进行grid划分，统计各个grid的link speed的均值 <br> 2. 用DCNN学习各个时刻的grid speed matrix  <br> 3. 将各个时刻DCNN学出的features 代入 到LSTM 然后预测下一时刻的所有link speed <br> 4. 预测多个可以将预测出的所有link speed再统计成grid matrix 再用DCNN学习代入之前的LSTM继续预测(有点类似NLP中预测后面的句子，把当前预测的单词作为输入不断预测下一个单词直到结束)</td>
+<td>Sensors, 2017</td>
+<td style="text-align:left">1. 对整个路网进行grid划分，统计各个grid的link speed的均值 <br> 2. 用DCNN（卷积，池化，全连接）学习各个时刻的grid speed matrix  <br> 3. 将各个时刻DCNN学出的features 代入 到LSTM 然后预测下一时刻的所有link speed <br> 4. 预测多个可以将预测出的所有link speed再统计成grid matrix 再用DCNN学习代入之前的LSTM继续预测(有点类似NLP中预测后面的句子，把当前预测的单词作为输入不断预测下一个单词直到结束)</td>
+</tr>
+<tr>
+<td style="text-align:left">Learning Traffic as Images: A Deep Convolutional Neural Network for Large-Scale Transportation Network Speed Prediction</td>
+<td>Xiaolei Ma, Zhuang Dai, Zhengbing He, Jihui Ma, Yong Wang, Yunpeng Wang</td>
+<td>Sensors, 2017</td>
+<td style="text-align:left">1. 针对环路或者路网，构建二维速度matrix，横为路段，纵为时间 <br> 2. 用DCNN(卷积 + 池化)对矩阵学习，最后用全连接对所有路段进行预测</td>
 </tr>
 </tbody>
 </table>
@@ -75,14 +81,14 @@
     
     <summary type="html">
     
-      &lt;p&gt;简单总结下看到的交通预测的论文方法, 会持续更新。&lt;/p&gt;
+      &lt;p&gt;简单总结下看到的交通预测的论文方法，会持续更新。&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
 &lt;th style=&quot;text-align:left&quot;&gt;Title&lt;/th&gt;
 &lt;th&gt;Author&lt;/th&gt;
 &lt;th&gt;Venue&lt;/th&gt;
-&lt;th style=&quot;text-
+&lt;th style=&quot;text-a
     
     </summary>
     
