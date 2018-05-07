@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-05-06T14:41:31.495Z</updated>
+  <updated>2018-05-07T14:17:36.474Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -16,11 +16,50 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Java垃圾收集</title>
+    <link href="http://yoursite.com/2018/05/07/Java%E5%9E%83%E5%9C%BE%E6%94%B6%E9%9B%86/"/>
+    <id>http://yoursite.com/2018/05/07/Java垃圾收集/</id>
+    <published>2018-05-07T12:26:00.000Z</published>
+    <updated>2018-05-07T14:17:36.474Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Java垃圾收集"><a href="#Java垃圾收集" class="headerlink" title="Java垃圾收集"></a>Java垃圾收集</h1><h3 id="内存回收判断算法"><a href="#内存回收判断算法" class="headerlink" title="内存回收判断算法"></a>内存回收判断算法</h3><ul>
+<li><p>引用计数法: 每个对象实例有一个引用技术，当有新变量指向这个对象实例时，引用计数器+1；当指向这个对象实例的引用超过了生命周期或者被设置为其它值时，引用计数器-1.对于引用计数为0的对象实例进行垃圾回收。当一个对象实例被垃圾收集时，它引用的任何对象实例的引用计数器-1。<br>  但是无法检测出循环引用。</p>
+<ul>
+<li><p>可达性分析算法: 将整个程序的引用看成是图，从GC Root开始深度/广度遍历，没有遍历到的节点则没无用节点<br>Java中可作为GC Root的对象有</p>
+<p>1.虚拟机栈中引用的对象（本地变量表）</p>
+<p>2.方法区中静态属性引用的对象</p>
+</li>
+</ul>
+<ol>
+<li><p>方法区中常量引用的对象</p>
+<p>4.本地方法栈中引用的对象（Native对象）</p>
+</li>
+</ol>
+</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Java垃圾收集&quot;&gt;&lt;a href=&quot;#Java垃圾收集&quot; class=&quot;headerlink&quot; title=&quot;Java垃圾收集&quot;&gt;&lt;/a&gt;Java垃圾收集&lt;/h1&gt;&lt;h3 id=&quot;内存回收判断算法&quot;&gt;&lt;a href=&quot;#内存回收判断算法&quot; class=&quot;head
+    
+    </summary>
+    
+      <category term="Java" scheme="http://yoursite.com/categories/Java/"/>
+    
+    
+      <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
+    
+      <category term="垃圾收集" scheme="http://yoursite.com/tags/%E5%9E%83%E5%9C%BE%E6%94%B6%E9%9B%86/"/>
+    
+  </entry>
+  
+  <entry>
     <title>交通流或速度预测论文总结</title>
     <link href="http://yoursite.com/2018/05/05/%E4%BA%A4%E9%80%9A%E6%B5%81%E6%88%96%E9%80%9F%E5%BA%A6%E9%A2%84%E6%B5%8B%E8%AE%BA%E6%96%87%E6%80%BB%E7%BB%93/"/>
     <id>http://yoursite.com/2018/05/05/交通流或速度预测论文总结/</id>
     <published>2018-05-05T06:58:04.000Z</published>
-    <updated>2018-05-06T14:41:31.495Z</updated>
+    <updated>2018-05-07T15:26:50.549Z</updated>
     
     <content type="html"><![CDATA[<p>简单总结下看到的交通预测的论文方法，会持续更新。</p>
 <table>
@@ -74,6 +113,18 @@
 <td>Xiaolei Ma, Zhuang Dai, Zhengbing He, Jihui Ma, Yong Wang, Yunpeng Wang</td>
 <td>Sensors, 2017</td>
 <td style="text-align:left">1. 针对环路或者路网，构建二维速度matrix，横为路段，纵为时间 <br> 2. 用DCNN(卷积 + 池化)对矩阵学习，最后用全连接对所有路段进行预测</td>
+</tr>
+<tr>
+<td style="text-align:left">Deep Spatio-Temporal Residual Networks for Citywide Crowd Flows Prediction</td>
+<td>Junbo Zhang, Yu Zheng, Dekang Qi</td>
+<td>AAAI, 2017</td>
+<td style="text-align:left">1. 划分grid，建立输入、输出流tensor <br> 2. 使用深度残差网络学习特征 <br> 3. 将趋势划分为三个等级(近期趋势，日趋势和周趋势)分别建模 <br> 4. 融合外部因素如天气，事件等</td>
+</tr>
+<tr>
+<td style="text-align:left">Traffic Speed Prediction and Congestion Source Exploration: A Deep Learning Method</td>
+<td>Jingyuan Wang, Qian Gu, Junjie Wu, Guannan Liu, Zhang Xiong</td>
+<td>ICDM, 2016</td>
+<td style="text-align:left">1. 针对环路，对每个路段构建一个时空矩阵(将该路段的前后路段以及近期时间的速度构成速度矩阵) <br> 2. 使用卷积和池化学习矩阵，同时引入误差反馈机制，即将之前的预测与实际的误差作为输入（实现时候是以rnn的方式实现），通过误差反馈来学习突发状况带来的路况突变 <br> 3. 通过神经网络权重计算道路重要性，也就是更可能拥挤的区域 (这一段还没完全理解，后续还需要再看下)</td>
 </tr>
 </tbody>
 </table>
