@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-05-08T07:17:10.313Z</updated>
+  <updated>2018-08-14T15:38:08.346Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,75 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>网络表征学习论文总结</title>
+    <link href="http://yoursite.com/2018/08/14/%E7%BD%91%E7%BB%9C%E8%A1%A8%E5%BE%81%E5%AD%A6%E4%B9%A0%E8%AE%BA%E6%96%87%E6%80%BB%E7%BB%93/"/>
+    <id>http://yoursite.com/2018/08/14/网络表征学习论文总结/</id>
+    <published>2018-08-14T15:36:59.000Z</published>
+    <updated>2018-08-14T15:38:08.346Z</updated>
+    
+    <content type="html"><![CDATA[<p>Embedding真的是一个很神奇的东西，自动word2vec出世之后，感觉一切东西都在想办法做embedding。其实我觉得就是应该这样，在计算机的世界只有数字，因此如何表示一个东西也只能靠数字，而embedding正是让我们往这个方向靠近，合理的embedding显得尤为重要。</p>
+<p>这里简单总结下看到的NE/NRL的embedding方法，会持续更新。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Title</th>
+<th>Author</th>
+<th>Venue</th>
+<th style="text-align:left">Contribution</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">DeepWalk: Online Learning of Social Representations</td>
+<td>Bryan Perozzi, Rami Al-Rfou, Steven Skiena</td>
+<td>KDD 2014</td>
+<td style="text-align:left">1. 使用random walk来对graph进行序列采样。<br> 2. 然后用skip-gram算法来对采样出的序列进行embedding。思想很简单，但是确实很有效。</td>
+</tr>
+<tr>
+<td style="text-align:left">node2vec: Scalable Feature Learning for Networks</td>
+<td>Aditya Grover, Jure Leskovec</td>
+<td>KDD 2016</td>
+<td style="text-align:left">1. 相比较于DeepWalk, 定义了一个bias随机游走。DFS和BFS对于学到的结构信息是不一样的，BFS更注重局部信息的挖掘，DFS会在图中走得更深，更注重全局结构信息。<br>2. 具体定义上，从t到v，返回t的未归一概率为1/p，到与t邻接的节点未归一概率为1，到与t不邻接的节点未归一概率为1/q, q控制着DFS/BFS的程度，p控制着返回原节点的程度。<br>3. 然后在采样完之后仍然使用skip-gram。</td>
+</tr>
+<tr>
+<td style="text-align:left">Network Representation Learning with Rich Text Information</td>
+<td>Cheng Yang, Zhiyuan Liu, Deli Zhao, Maosong Sun, Edward Y. Chang</td>
+<td>IJCAI 2015</td>
+<td style="text-align:left">1. 论文说明了DeepWalk等同于M的矩阵分解，M<sub>i,j</sub> 表示从i节点不超过k步到大j节点的概率。<br>2. 因此该论文直接是用矩阵分解求向量，并且该论文还引入了节点信息，也是就再用一个矩阵  T  表示节点的额外信息, 最后优化 (M - W<sup>T</sup>HT) 的 F范数 加上 W 和 H 的L2 正则之和</td>
+</tr>
+<tr>
+<td style="text-align:left">Max-Margin DeepWalk Discriminative Learning of Network Representation</td>
+<td>Cunchao Tu, Weicheng Zhang, Zhiyuan Liu, Maosong Sun</td>
+<td>IJCAI 2016</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">Learning Graph Representations with Global Structural Information</td>
+<td>Shaosheng Cao, Wei Lu, Qiongkai Xu</td>
+<td>CIKM 2015</td>
+</tr>
+</tbody>
+</table>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Embedding真的是一个很神奇的东西，自动word2vec出世之后，感觉一切东西都在想办法做embedding。其实我觉得就是应该这样，在计算机的世界只有数字，因此如何表示一个东西也只能靠数字，而embedding正是让我们往这个方向靠近，合理的embedding显得尤
+    
+    </summary>
+    
+      <category term="机器学习" scheme="http://yoursite.com/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="NRL" scheme="http://yoursite.com/tags/NRL/"/>
+    
+      <category term="NE" scheme="http://yoursite.com/tags/NE/"/>
+    
+      <category term="网络表征" scheme="http://yoursite.com/tags/%E7%BD%91%E7%BB%9C%E8%A1%A8%E5%BE%81/"/>
+    
+  </entry>
   
   <entry>
     <title>Java垃圾收集</title>
@@ -83,7 +152,7 @@
     <link href="http://yoursite.com/2018/05/05/%E4%BA%A4%E9%80%9A%E6%B5%81%E6%88%96%E9%80%9F%E5%BA%A6%E9%A2%84%E6%B5%8B%E8%AE%BA%E6%96%87%E6%80%BB%E7%BB%93/"/>
     <id>http://yoursite.com/2018/05/05/交通流或速度预测论文总结/</id>
     <published>2018-05-05T06:58:04.000Z</published>
-    <updated>2018-05-07T15:26:50.549Z</updated>
+    <updated>2018-05-08T09:24:55.494Z</updated>
     
     <content type="html"><![CDATA[<p>简单总结下看到的交通预测的论文方法，会持续更新。</p>
 <table>
@@ -149,6 +218,12 @@
 <td>Jingyuan Wang, Qian Gu, Junjie Wu, Guannan Liu, Zhang Xiong</td>
 <td>ICDM, 2016</td>
 <td style="text-align:left">1. 针对环路，对每个路段构建一个时空矩阵(将该路段的前后路段以及近期时间的速度构成速度矩阵) <br> 2. 使用卷积和池化学习矩阵，同时引入误差反馈机制，即将之前的预测与实际的误差作为输入（实现时候是以rnn的方式实现），通过误差反馈来学习突发状况带来的路况突变 <br> 3. 通过神经网络权重计算道路重要性，也就是更可能拥挤的区域 (这一段还没完全理解，后续还需要再看下)</td>
+</tr>
+<tr>
+<td style="text-align:left">An Improved Fuzzy Neural Network for Traffic Speed Prediction Considering Periodic Characteristic</td>
+<td>Jinjun Tang, Fang Liu, Yajie Zou, Weibin Zhang, Yinhai Wang</td>
+<td>IEEE Trans. ITS, 2017</td>
+<td style="text-align:left"></td>
 </tr>
 </tbody>
 </table>
