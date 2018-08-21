@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-08-14T15:38:08.346Z</updated>
+  <updated>2018-08-21T14:58:57.369Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://yoursite.com/2018/08/14/%E7%BD%91%E7%BB%9C%E8%A1%A8%E5%BE%81%E5%AD%A6%E4%B9%A0%E8%AE%BA%E6%96%87%E6%80%BB%E7%BB%93/"/>
     <id>http://yoursite.com/2018/08/14/网络表征学习论文总结/</id>
     <published>2018-08-14T15:36:59.000Z</published>
-    <updated>2018-08-14T15:38:08.346Z</updated>
+    <updated>2018-08-21T14:58:57.369Z</updated>
     
     <content type="html"><![CDATA[<p>Embedding真的是一个很神奇的东西，自动word2vec出世之后，感觉一切东西都在想办法做embedding。其实我觉得就是应该这样，在计算机的世界只有数字，因此如何表示一个东西也只能靠数字，而embedding正是让我们往这个方向靠近，合理的embedding显得尤为重要。</p>
 <p>这里简单总结下看到的NE/NRL的embedding方法，会持续更新。</p>
@@ -56,12 +56,31 @@
 <td style="text-align:left">Max-Margin DeepWalk Discriminative Learning of Network Representation</td>
 <td>Cunchao Tu, Weicheng Zhang, Zhiyuan Liu, Maosong Sun</td>
 <td>IJCAI 2016</td>
-<td style="text-align:left"></td>
+<td style="text-align:left">1. DeepWalk 结合 SVM，损失函数正是两者的和 <br> 2. 先固定分解矩阵优化svm部分，再固定svm部分优化分解的矩阵，这里优化时候加入了一个偏置梯度。（其实不是很明白，以后再过这一篇）</td>
 </tr>
 <tr>
-<td style="text-align:left">Learning Graph Representations with Global Structural Information</td>
+<td style="text-align:left">GraRep: Learning Graph Representations with Global Structural Information</td>
 <td>Shaosheng Cao, Wei Lu, Qiongkai Xu</td>
 <td>CIKM 2015</td>
+<td style="text-align:left">分析不同k步到达所刻画的图信息不同，并对k步到达转移概率矩阵做矩阵分解来学习k步到达的图的节点向量。最后将1 到 K 的向量连接成最后的向量表示。</td>
+</tr>
+<tr>
+<td style="text-align:left">LINE: Large-scale Information Network Embedding</td>
+<td>Jian Tang, Meng Qu, Mingzhe Wang, Ming Zhang, Jun Yan, Qiaozhu Mei</td>
+<td>WWW 2015</td>
+<td style="text-align:left">1. 1st order proximity 直接优化i和j的相似度，以归一化后的权重为目标，使用KL散度作为loss函数。 <br> 2. 2st order proximity 是优化i节点确定下j节点的概率，以i和j的权重除以i节点出度之和为目标，仍然使用KL散度。 <br> 3. 采用边的负采样方法，本质就是skip-gram的负采样。</td>
+</tr>
+<tr>
+<td style="text-align:left">PTE: Predictive Text Embedding through Large-scale Heterogeneous Text Networks</td>
+<td>Jian Tang, Meng Qu, Qiaozhu Mei</td>
+<td>KDD 2015</td>
+<td style="text-align:left">1. 类似LINE的2st order proximity应用在二分图网络节点。 <br> 2. 构建word-word，word-document，word-label 3种二分图网络，最后的损失函数为三者之和。 <br> 3. 提出两种优化方式，一种直接三者一起优化，一种先优化word-word和word-document，最后优化word-label损失</td>
+</tr>
+<tr>
+<td style="text-align:left">Fast Network Embedding Enhancement via High Order Proximity Approximation</td>
+<td>Cheng Yang, Maosong Sun, Zhiyuan Liu, Cunchao Tu</td>
+<td>IJCAI 2017</td>
+<td style="text-align:left">1. 在低阶(low-order)矩阵分解的结果上进行更新以获得高阶(high-order)效果。 <br> 2. 对所有矩阵分解类的算法都适用，如果我们分解出的矩阵为R和C，更新法则为R<sub>new</sub>=kAR,C<sub>new</sub>=kA<sup>T</sup>C,其中A为1步转移概率矩阵，k需要小于0.5</td>
 </tr>
 </tbody>
 </table>
