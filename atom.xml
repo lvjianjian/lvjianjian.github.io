@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-08-21T14:58:57.369Z</updated>
+  <updated>2018-08-26T15:22:25.175Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://yoursite.com/2018/08/14/%E7%BD%91%E7%BB%9C%E8%A1%A8%E5%BE%81%E5%AD%A6%E4%B9%A0%E8%AE%BA%E6%96%87%E6%80%BB%E7%BB%93/"/>
     <id>http://yoursite.com/2018/08/14/网络表征学习论文总结/</id>
     <published>2018-08-14T15:36:59.000Z</published>
-    <updated>2018-08-21T14:58:57.369Z</updated>
+    <updated>2018-08-26T15:22:25.175Z</updated>
     
     <content type="html"><![CDATA[<p>Embedding真的是一个很神奇的东西，自动word2vec出世之后，感觉一切东西都在想办法做embedding。其实我觉得就是应该这样，在计算机的世界只有数字，因此如何表示一个东西也只能靠数字，而embedding正是让我们往这个方向靠近，合理的embedding显得尤为重要。</p>
 <p>这里简单总结下看到的NE/NRL的embedding方法，会持续更新。</p>
@@ -81,6 +81,24 @@
 <td>Cheng Yang, Maosong Sun, Zhiyuan Liu, Cunchao Tu</td>
 <td>IJCAI 2017</td>
 <td style="text-align:left">1. 在低阶(low-order)矩阵分解的结果上进行更新以获得高阶(high-order)效果。 <br> 2. 对所有矩阵分解类的算法都适用，如果我们分解出的矩阵为R和C，更新法则为R<sub>new</sub>=kAR,C<sub>new</sub>=kA<sup>T</sup>C,其中A为1步转移概率矩阵，k需要小于0.5</td>
+</tr>
+<tr>
+<td style="text-align:left">TransNet: Translation-Based Network Representation Learning for Social Relation Extraction</td>
+<td>Cunchao Tu, Zhengyan Zhang, Zhiyuan Liu, Maosong Sun</td>
+<td>IJCAI 2017</td>
+<td style="text-align:left">1. 这篇文章不但可以对node编码，其实还对边上的label进行了编码，使用一个autoencode对边的labels进行编码，并且限定起始点的vector加上该边的vector等于终点的vector。<br> 2. 对节点进行了编码。并且可以通过终点向量减去起点向量并使用AE的解码部分来预测边上的labels。</td>
+</tr>
+<tr>
+<td style="text-align:left">A General Framework for Content-enhanced Network Representation Learning</td>
+<td>Xiaofei Sun, Jiang Guo, Xiao Ding, Ting Liu</td>
+<td>CoRR 2016</td>
+<td style="text-align:left">1. 学习节点带有文本信息的向量表示化，在paper中文本指句子。<br> 2. 损失函数由2部分组成，第一部分是正常的节点和节点的损失函数，第二部分是节点和内容的损失函数。<br> 3. 内容的表征用RNN/BiRNN编码</td>
+</tr>
+<tr>
+<td style="text-align:left">Context-Aware Network Embedding for Relation Modeling</td>
+<td>Cunchao Tu, Han Liu, Zhiyuan Liu, Maosong Sun</td>
+<td>ACL 2017</td>
+<td style="text-align:left">1. 学习节点的结构向量和文本向量 <br> 2.  文本向量的学习通过节点文本的cnn操作出的2个矩阵，在中间乘上一个attentive矩阵(可能只是目标的空间变换)，再做行、列的池化加归一化得到两个节点的attention向量，最后乘以cnn出的矩阵得到文本向量。<br> 3. 损失函数由u，v的结构、文本的4种条件概率组成（Line中的二阶相似）,使用负采样算法 </td>
 </tr>
 </tbody>
 </table>
